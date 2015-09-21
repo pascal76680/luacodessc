@@ -1,5 +1,12 @@
-function Music_Goauld()
+-- ######################################## --
+-- #### Phoenix Interactive Inc. - SSC #### -- 
+-- #### Author : pascal76680 ; Kctsu   #### --
+-- #### Function : Music_Goauld()      #### --
+-- #### Used for launch music          #### --
+-- ######################################## --
 
+function Music_Goauld()
+	Rule_Remove("Music_Goauld")
 	if musicinit >= 8 then
 	    ec_random_number = random(4,5)
 	    else
@@ -22,8 +29,8 @@ function Music_Goauld()
 	   ec_random_path = "Data:sound/music/goa/battle2"
 	   musiclenght = 141
 	end
-	Rule_Remove("Music_Goauld")
-	return ec_random_path, musiclenght
+
+	return ec_random_path, musiclenght, musicinit
 
 end
 

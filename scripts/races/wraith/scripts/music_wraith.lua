@@ -1,4 +1,12 @@
+-- ######################################## --
+-- #### Phoenix Interactive Inc. - SSC #### -- 
+-- #### Author : pascal76680 ; Kctsu   #### --
+-- #### Function : Music_Wraith()      #### --
+-- #### Used for launch music          #### --
+-- ######################################## --
+
 function Music_Wraith()
+	Rule_Remove("Music_Wraith")
 	if musicinit >= 8 then
 	    ec_random_number = random(4,5)
 	    else
@@ -21,8 +29,8 @@ function Music_Wraith()
 	   ec_random_path = "Data:sound/music/wra/battle2"
 	   musiclenght = 94
 	end
-	Rule_Remove("Music_Wraith")
-	return ec_random_path, musiclenght
+
+	return ec_random_path, musiclenght, musicinit
 end
 
 

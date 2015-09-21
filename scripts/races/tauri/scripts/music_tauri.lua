@@ -1,3 +1,9 @@
+-- ######################################## --
+-- #### Phoenix Interactive Inc. - SSC #### -- 
+-- #### Author : pascal76680 ; Kctsu   #### --
+-- #### Function : Music_Tau()         #### --
+-- #### Used for launch music          #### --
+-- ######################################## --
 
 function Music_Tau()
 	Rule_Remove("Music_Tau")
@@ -14,19 +20,19 @@ function Music_Tau()
 	end 
 	if ec_random_number == 1 then
 	   ec_random_path = "Data:sound/music/tau/ambient3"
-	   musiclenght = 10 --126
+	   musiclenght = 126
 	elseif ec_random_number == 2 then
 	   ec_random_path = "Data:sound/music/tau/ambient1"
-	   musiclenght = 10 --109
+	   musiclenght = 1109
 	elseif ec_random_number == 3  then
 	   ec_random_path = "Data:sound/music/tau/ambient2"
-	   musiclenght = 10 --115
+	   musiclenght = 115
 	elseif ec_random_number == 4  then
 	   ec_random_path = "Data:sound/music/tau/battle1"
-	   musiclenght = 10 --163
+	   musiclenght = 163
 	elseif ec_random_number == 5  then
 	   ec_random_path = "Data:sound/music/tau/battle2"
-	   musiclenght = 10 --240
+	   musiclenght = 240
 	end
 
 	return ec_random_path, musiclenght, musicinit
