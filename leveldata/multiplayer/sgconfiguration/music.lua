@@ -4,19 +4,22 @@ ec_random_path = ""
 
 function MusicInit()
 	Rule_Remove("MusicInit")
+	local Path = PlayerRace_GetString(Universe_CurrentPlayer(), "cfg_music", "")
+	dofilepath(Path)
+end
+
+function MusicInit_Launch()
+	Rule_Remove("MusicInit_Launch")
 	print("FE_GetCurrentPlayerIndex() = "..FE_GetCurrentPlayerIndex())
 	print("Universe_CurrentPlayer() = "..Universe_CurrentPlayer())
 	Proc_Music = nil
   local playerID = Player_GetRace(Universe_CurrentPlayer())
-	dofilepath(PlayerRace_GetString(Universe_CurrentPlayer(), "cfg_music", ""))
 	if ( Proc_Music ~= nil ) then
 			Proc_Music()
 			Sound_MusicPlay(ec_random_path)
 			print("MusicInit : "..musicinit)
 			print("Music path : "..ec_random_path)
 	end
-	Rule_AddInterval("MusicInit", musiclenght) 
+	Rule_AddInterval("MusicInit_Launch", musiclenght) 
 end
-
-
 
